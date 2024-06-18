@@ -12,7 +12,7 @@ This project is getting header and footer components from shared project. The he
 ![image](https://github.com/facundoVega/root-shell-mfe/assets/11906403/b2fe3c73-b457-4bbb-b257-4e4c71b38a95)
 
 
-### Getting Servoce from  Shared project:
+### Getting Service from  Shared project:
 This project is getting the "testService" from shared MFE app too, you can visualize the implementation on table-component. This is reflected on the "/heroes" route:
 ![image](https://github.com/facundoVega/root-shell-mfe/assets/11906403/e5cfa232-a996-48f1-b0a1-5f9814cb6c94)
 
