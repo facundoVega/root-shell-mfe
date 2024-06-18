@@ -1,7 +1,8 @@
 
 ## Relationship with Claim project
-It is consuming claims route from the remote claim MFE app. It is reflected on default route:
-![](./Claims.PNG)
+It is consuming claims component from the remote claim MFE app. It is reflected on default route:
+<img width="931" alt="ClaimsApp" src="https://github.com/facundoVega/root-shell-mfe/assets/11906403/eed82170-d49e-49a8-a60c-96bfea6a9291">
+
 
 ## Relationship with Shared project:
 
