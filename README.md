@@ -9,7 +9,10 @@ It is consuming claims component from the remote claim MFE app. It is reflected 
 ### Getting Components from  Shared project:
 This project is getting header and footer components from shared project. The header component is a standalone component and the foooter is a regular Angular component
 , so this demonstration covers both scenarios.
+![image](https://github.com/facundoVega/root-shell-mfe/assets/11906403/b2fe3c73-b457-4bbb-b257-4e4c71b38a95)
+
 
 ### Getting Servoce from  Shared project:
 This project is getting the "testService" from shared MFE app too, you can visualize the implementation on table-component. This is reflected on the "/heroes" route:
-![](./Services.PNG)
+![image](https://github.com/facundoVega/root-shell-mfe/assets/11906403/e5cfa232-a996-48f1-b0a1-5f9814cb6c94)
+
