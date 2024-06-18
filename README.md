@@ -18,8 +18,9 @@ This project is getting the "testService" from shared MFE app too, you can visua
 
 
 ## How to run this solution:
-Clone claims repo: https://github.com/facundoVega/mfe2-remote-mfe
-Clone Shared repo: https://github.com/facundoVega/shared-remote-mfe
+- Clone claims repo: https://github.com/facundoVega/mfe2-remote-mfe
+
+- Clone Shared repo: https://github.com/facundoVega/shared-remote-mfe
 
 serve this repos on following order:
 1) Claims
