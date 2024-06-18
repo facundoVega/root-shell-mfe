@@ -16,3 +16,12 @@ This project is getting header and footer components from shared project. The he
 This project is getting the "testService" from shared MFE app too, you can visualize the implementation on table-component. This is reflected on the "/heroes" route:
 ![image](https://github.com/facundoVega/root-shell-mfe/assets/11906403/e5cfa232-a996-48f1-b0a1-5f9814cb6c94)
 
+
+## How to run this solution:
+Clone claims repo: https://github.com/facundoVega/mfe2-remote-mfe
+Clone Shared repo: https://github.com/facundoVega/shared-remote-mfe
+
+serve this repos on following order:
+1) Claims
+2) Shared
+3) Root
