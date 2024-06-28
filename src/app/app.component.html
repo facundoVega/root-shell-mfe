@@ -2,7 +2,7 @@
   <header-component></header-component>
   <sidebar-component></sidebar-component>
   <div class="main-container">
-    <h2>Welcome {{ user }}!</h2>
+    <h2>Welcome {{ $user | async }}!</h2>
    <button (click)='logout()'>Logout</button>
   </div>
   <div #footerContainer>
