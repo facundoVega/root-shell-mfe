@@ -1,5 +1,6 @@
 import { loadRemoteModule } from '@angular-architects/module-federation';
-import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component,  OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { MsalCustomService } from '@mezomon/shared-library-test';
 
 @Component({
   selector: 'app-root',
@@ -7,15 +8,24 @@ import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit  {
-  title = 'root';
+  user!: string;
   @ViewChild("container", { read: ViewContainerRef }) mainContainer!: ViewContainerRef;
   @ViewChild("footerContainer", { read: ViewContainerRef }) footerContainer!: ViewContainerRef;
 
+  constructor(
+    private msalCustomService: MsalCustomService
+  ) {}
+
+  
   ngOnInit(): void {
-    this.loadHeader();
-    this.loadFooter();
+    this.msalCustomService.checkLogin().subscribe((userName)=> { 
+      this.user = userName;
+    });
   }
 
+  logout(): void {
+    this.msalCustomService.logout();
+  }
   async loadHeader() {
       const module = await loadRemoteModule({
       type: 'module',
