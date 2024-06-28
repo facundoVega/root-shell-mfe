@@ -21,6 +21,7 @@ export class AppComponent implements OnInit  {
     this.msalCustomService.checkLogin().subscribe((userName)=> { 
       this.user = userName;
     });
+    this.loadFooter();
   }
 
   logout(): void {
@@ -41,7 +42,6 @@ export class AppComponent implements OnInit  {
     remoteEntry: 'http://localhost:4203/remoteEntry.js',
     exposedModule: './footer'
   });
-    const { instance } = this.mainContainer.createComponent(module.FooterComponent);
+    const { instance } = this.footerContainer.createComponent(module.FooterComponent);
 }
-
 }

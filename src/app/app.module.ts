@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TableComponent } from './table-component/table.component';
 import { MsalRedirectComponent } from '@azure/msal-angular';
-import { msalAuthModule } from '@mezomon/shared-library-test';
+import { msalAuthModule, HeaderComponent, SidebarComponent } from '@mezomon/shared-library-test';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,9 @@ import { msalAuthModule } from '@mezomon/shared-library-test';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    msalAuthModule
+    msalAuthModule,
+    HeaderComponent,
+    SidebarComponent
   ],
   providers: [],
   bootstrap: [AppComponent, MsalRedirectComponent]
