@@ -1,12 +1,10 @@
 <div  class="container">
   <header-component></header-component>
-  <sidebar-component></sidebar-component>
+  <sidebar-component [routes]='routes'></sidebar-component>
   <div class="main-container">
-    <h2>Welcome {{ $user | async }}!</h2>
-   <button (click)='logout()'>Logout</button>
+   <router-outlet></router-outlet>
   </div>
-  <div #footerContainer>
-  </div>
+  <footer-component></footer-component>
 </div>
 
 

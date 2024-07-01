@@ -1,6 +1,6 @@
 import { loadRemoteModule } from '@angular-architects/module-federation';
 import { Component,  OnInit, ViewChild, ViewContainerRef } from '@angular/core';
-import { MsalCustomService, activeUSer, currentUser } from '@mezomon/shared-library-test';
+import { LibRoute, MsalCustomService, activeUSer, currentUser } from '@mezomon/shared-library-test';
 import { Store } from '@ngrx/store';
 
 @Component({
@@ -12,6 +12,11 @@ export class AppComponent implements OnInit  {
   user!: string;
 
   $user = this.store.select(activeUSer)
+
+  routes: LibRoute[] = [
+    {title: 'Home', link: ''},
+    {title: 'Claims', link: 'claims'}
+  ]
   @ViewChild("container", { read: ViewContainerRef }) mainContainer!: ViewContainerRef;
   @ViewChild("footerContainer", { read: ViewContainerRef }) footerContainer!: ViewContainerRef;
 
