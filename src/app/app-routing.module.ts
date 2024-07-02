@@ -1,8 +1,6 @@
-import { NgModule, inject } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivateFn, RouterModule, RouterStateSnapshot, Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import {   RouterModule,  Routes } from '@angular/router';
 import { loadRemoteModule } from '@angular-architects/module-federation'
-import { TableComponent } from './table-component/table.component';
-import { AppComponent } from './app.component';
 import { msalGuardCanActivate } from '@mezomon/shared-library-test';
 import { MainComponent } from './main-component/main.component';
 
@@ -17,6 +15,17 @@ const routes: Routes = [
       exposedModule: './ClaimModule'
     }).then((m) => {
      return  m.ClaimModule
+    })
+  },
+  {
+    path: 'remits', 
+    canActivate: [msalGuardCanActivate],
+    loadChildren:() => loadRemoteModule({
+      type: 'module',
+      remoteEntry: 'http://localhost:4202/remoteEntry.js',
+      exposedModule: './RemitsModule'
+    }).then((m) => {
+     return  m.RemitsModule
     })
   },
   {

@@ -4,7 +4,7 @@ module.exports = withModuleFederationPlugin({
 
   remotes: {
     "mfClaims": "http://localhost:4201/remoteEntry.js",
-    "shared": "http://localhost:4203/remoteEntry.js"
+    "remits": "http://localhost:4202/remoteEntry.js"
   },
 
   shared: {

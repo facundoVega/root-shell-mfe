@@ -15,7 +15,9 @@ export class AppComponent implements OnInit  {
 
   routes: LibRoute[] = [
     {title: 'Home', link: ''},
-    {title: 'Claims', link: 'claims'}
+    {title: 'Claims', link: 'claims'},
+    {title: 'remits', link: 'remits'}
+
   ]
   @ViewChild("container", { read: ViewContainerRef }) mainContainer!: ViewContainerRef;
   @ViewChild("footerContainer", { read: ViewContainerRef }) footerContainer!: ViewContainerRef;
