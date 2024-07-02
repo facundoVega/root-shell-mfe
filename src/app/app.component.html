@@ -1,5 +1,5 @@
 <div  class="container">
-  <header-component></header-component>
+  <header-component [store]='getStore()'></header-component>
   <sidebar-component [routes]='routes'></sidebar-component>
   <div class="main-container">
    <router-outlet></router-outlet>

@@ -16,7 +16,7 @@ export class AppComponent implements OnInit  {
   routes: LibRoute[] = [
     {title: 'Home', link: ''},
     {title: 'Claims', link: 'claims'},
-    {title: 'remits', link: 'remits'}
+    {title: 'Remits', link: 'remits'}
 
   ]
   @ViewChild("container", { read: ViewContainerRef }) mainContainer!: ViewContainerRef;
@@ -27,7 +27,10 @@ export class AppComponent implements OnInit  {
     private store: Store,
   ) {}
 
-  
+  getStore(): Store {
+    return this.store;
+  }
+
   ngOnInit(): void {
     this.loadFooter();
 
