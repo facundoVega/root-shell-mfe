@@ -16,7 +16,6 @@ const routes: Routes = [
       remoteEntry: 'http://localhost:4201/remoteEntry.js',
       exposedModule: './ClaimModule'
     }).then((m) => {
-      console.log(m.ClaimModule);
      return  m.ClaimModule
     })
   },

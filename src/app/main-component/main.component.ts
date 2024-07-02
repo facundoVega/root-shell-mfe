@@ -19,12 +19,12 @@ export class MainComponent {
         ) {}
     
     ngOnInit(): void {
-    
+        (window as any).Store = this.store;
         this.msalCustomService.checkLogin().subscribe((userName)=> { 
             this.store.dispatch(currentUser({userName: userName}));
         });
         }
-    
+        
         logout(): void {
         this.msalCustomService.logout();
         }
